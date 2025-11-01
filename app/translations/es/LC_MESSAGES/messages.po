@@ -1,0 +1,105 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-11-01 17:10-0400\n"
+"PO-Revision-Date: 2025-11-01 17:09-0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/__init__.py:25
+msgid "Please log in to access this page."
+msgstr ""
+
+#: app/forms.py:12
+msgid "Username"
+msgstr ""
+
+#: app/templates/404.html:4
+msgid "File Not Found"
+msgstr ""
+
+#: app/templates/_post.html:12
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr ""
+
+#: app/templates/index.html:5
+#, python-format
+msgid "Hi, %(username)s!"
+msgstr ""
+
+#: app/templates/message.html:4
+msgid "Messages"
+msgstr ""
+
+#: app/templates/message.html:12
+msgid "Newer messages"
+msgstr ""
+
+#: app/templates/message.html:17
+msgid "Older messages"
+msgstr ""
+
+#: app/templates/search.html:4
+msgid "Search Results"
+msgstr ""
+
+#: app/templates/search.html:12 app/templates/user.html:52
+msgid "Newer posts"
+msgstr ""
+
+#: app/templates/search.html:17 app/templates/user.html:57
+msgid "Older posts"
+msgstr ""
+
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send Message to %(recipient)s"
+msgstr ""
+
+#: app/templates/user.html:8
+msgid "User"
+msgstr ""
+
+#: app/templates/user.html:11 app/templates/user_popup.html:7
+msgid "Last seen on"
+msgstr ""
+
+#: app/templates/user.html:13 app/templates/user_popup.html:9
+#, python-format
+msgid "%(count)d followers"
+msgstr ""
+
+#: app/templates/user.html:13 app/templates/user_popup.html:9
+#, python-format
+msgid "%(count)d following"
+msgstr ""
+
+#: app/templates/user.html:15
+msgid "Edit your profile"
+msgstr ""
+
+#: app/templates/user.html:28 app/templates/user_popup.html:15
+msgid "Follow"
+msgstr ""
+
+#: app/templates/user.html:35 app/templates/user_popup.html:22
+msgid "Unfollow"
+msgstr ""
+
+#: app/templates/user.html:40
+msgid "Send private message"
+msgstr ""
+

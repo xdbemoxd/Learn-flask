@@ -10,6 +10,11 @@ import os
 from flask_mail import Mail
 from flask_babel import Babel
 from flask_moment import Moment
+from flask import request
+from flask_babel import lazy_gettext as _l
+
+def get_locale():
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -17,8 +22,9 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
+login.login_message = _l('Please log in to access this page.')
 mail = Mail(app)
-babel = Babel(app)
+babel = Babel(app, locale_selector=get_locale)
 moment = Moment(app)
 
 
