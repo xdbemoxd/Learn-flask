@@ -12,6 +12,7 @@ from flask_babel import Babel
 from flask_moment import Moment
 from flask import request
 from flask_babel import lazy_gettext as _l
+from elasticsearch import Elasticsearch
 
 
 def get_locale():
@@ -38,6 +39,8 @@ def create_app():
     mail.init_app(app)
     moment.init_app(app)
     babel.init_app(app)
+    app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
+        if app.config['ELASTICSEARCH_URL'] else None
 
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
