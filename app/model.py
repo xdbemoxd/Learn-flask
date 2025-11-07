@@ -9,7 +9,7 @@ from app import login
 from hashlib import md5
 from time import time
 import jwt
-from app import app
+from app import create_app
 
 
 followers = sa.Table(
@@ -99,7 +99,7 @@ class User( UserMixin, db.Model ):
     def get_reset_password_token(self, expires_in=600):
         return jwt.encode(
             {'reset_password': self.id, 'exp': time() + expires_in},
-            app.config['SECRET_KEY'], algorithm='HS256')
+            create_app().config['SECRET_KEY'], algorithm='HS256')
 
     @staticmethod
     def verify_reset_password_token(token):
